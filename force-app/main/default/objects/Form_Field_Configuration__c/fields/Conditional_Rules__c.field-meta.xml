@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conditional_Rules__c</fullName>
+    <description>JSON rule(s) controlling this field&apos;s conditional visibility or required-ness based on another field&apos;s value.</description>
+    <inlineHelpText>Example: {&quot;controllingField&quot;:&quot;BillingCountry&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;USA&quot;,&quot;action&quot;:&quot;require&quot;}. Leave blank for no conditional behavior.</inlineHelpText>
+    <label>Conditional Rules</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

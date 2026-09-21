@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_API_Name__c</fullName>
+    <description>API name of the target Salesforce object this form creates or updates (e.g. Account, Contact, or a custom object).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Must be a valid, deployed object API name. This drives the schema describe used to build the form.</inlineHelpText>
+    <label>Object API Name</label>
+    <length>255</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

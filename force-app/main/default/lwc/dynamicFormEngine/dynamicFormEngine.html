@@ -1,0 +1,72 @@
+<template>
+    <template if:true={errorMessage}>
+        <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+            {errorMessage}
+        </div>
+    </template>
+
+    <template if:true={schema}>
+        <lightning-card icon-name="standard:form">
+
+            <div slot="actions" if:true={isComposite} class="slds-text-body_small slds-text-color_weak">
+                {stepProgressLabel}
+            </div>
+
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+                <template if:true={isDone}>
+                    <div class="slds-notify slds-notify_alert slds-theme_success" role="alert">
+                        {successMessage}
+                    </div>
+                </template>
+
+                <template if:false={isDone}>
+
+                    <template if:true={hasValidationErrors}>
+                        <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="alert">
+                            <ul>
+                                <template for:each={validationErrors} for:item="err">
+                                    <li key={err}>{err}</li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+
+                    <div class="slds-box slds-box_x-small slds-p-around_medium dfb-form-outline">
+                        <h2 class="slds-text-heading_medium slds-text-align_center slds-m-bottom_medium">
+                            {cardTitle}
+                        </h2>
+
+                        <template for:each={activeSections} for:item="section">
+                            <c-dynamic-form-section
+                                key={section.sectionName}
+                                section={section}
+                                field-values={fieldValues}
+                                hidden-field-api-names={hiddenFieldApiNames}
+                                required-overrides={requiredOverrides}
+                                onfieldchange={handleFieldChange}>
+                            </c-dynamic-form-section>
+                        </template>
+
+                        <div class="slds-align_absolute-center slds-m-top_medium">
+                            <lightning-button
+                                if:false={isFirstStep}
+                                label="Back"
+                                onclick={handleBack}
+                                disabled={isSubmitting}
+                                class="slds-m-right_small">
+                            </lightning-button>
+                            <lightning-button
+                                variant="brand"
+                                label={submitButtonLabel}
+                                onclick={handleSubmit}
+                                disabled={isSubmitting}>
+                            </lightning-button>
+                        </div>
+                    </div>
+
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+</template>

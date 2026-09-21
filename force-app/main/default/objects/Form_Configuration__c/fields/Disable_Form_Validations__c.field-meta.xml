@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Form_Validations__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, the engine skips required-field, pattern, and conditional-rule validations at submit time.</description>
+    <inlineHelpText>Use for quick, low-friction internal forms only. Field-Level Security is never skipped by this flag.</inlineHelpText>
+    <label>Disable Form Validations</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

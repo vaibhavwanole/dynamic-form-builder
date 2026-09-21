@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Data_Type__c</fullName>
+    <description>Overrides the schema-derived data type for this field when populated.</description>
+    <inlineHelpText>Leave blank to auto-detect the type from the target object&apos;s schema. Populate only to force a different rendering (e.g. render a phone field as masked Text).</inlineHelpText>
+    <label>Field Data Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Address</fullName>
+                <default>false</default>
+                <label>Address</label>
+            </value>
+            <value>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+                <label>Checkbox</label>
+            </value>
+            <value>
+                <fullName>Currency</fullName>
+                <default>false</default>
+                <label>Currency</label>
+            </value>
+            <value>
+                <fullName>Date</fullName>
+                <default>false</default>
+                <label>Date</label>
+            </value>
+            <value>
+                <fullName>DateTime</fullName>
+                <default>false</default>
+                <label>DateTime</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Long Text Area</fullName>
+                <default>false</default>
+                <label>Long Text Area</label>
+            </value>
+            <value>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+                <label>Lookup</label>
+            </value>
+            <value>
+                <fullName>Multi-Select Picklist</fullName>
+                <default>false</default>
+                <label>Multi-Select Picklist</label>
+            </value>
+            <value>
+                <fullName>Number</fullName>
+                <default>false</default>
+                <label>Number</label>
+            </value>
+            <value>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+                <label>Picklist</label>
+            </value>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

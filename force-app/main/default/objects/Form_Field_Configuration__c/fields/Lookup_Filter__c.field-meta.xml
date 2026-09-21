@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lookup_Filter__c</fullName>
+    <description>Optional SOQL WHERE-clause fragment used to filter lookup search results.</description>
+    <inlineHelpText>e.g. &quot;Type = &apos;Customer&apos;&quot;. Leave blank for no filtering.</inlineHelpText>
+    <label>Lookup Filter</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

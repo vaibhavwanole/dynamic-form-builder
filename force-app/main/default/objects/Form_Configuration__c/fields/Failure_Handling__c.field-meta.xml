@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failure_Handling__c</fullName>
+    <description>How a composite form handles a failure on any step.</description>
+    <inlineHelpText>Only relevant on the master (Is Composite = true) record. Rollback undoes all prior steps&apos; DML on any failure. Retry keeps successful steps committed and only re-renders the failed step.</inlineHelpText>
+    <label>Failure Handling</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rollback All Steps</fullName>
+                <default>false</default>
+                <label>Rollback All Steps</label>
+            </value>
+            <value>
+                <fullName>Retry Failed Step Only</fullName>
+                <default>false</default>
+                <label>Retry Failed Step Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_Name__c</fullName>
+    <description>Name of the section this field is grouped under.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fields sharing the same Section Name render together under one heading.</inlineHelpText>
+    <label>Section Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,93 @@
+<template>
+    <div class={field.dataType} if:false={hidden}>
+
+        <template if:true={isText}>
+            <lightning-input type="text" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} placeholder={field.placeholder} field-level-help={field.helpText}
+                pattern={field.validationPattern} message-when-pattern-mismatch={field.validationError}
+                onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isEmail}>
+            <lightning-input type="email" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} placeholder={field.placeholder} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isPassword}>
+            <lightning-input type="password" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} placeholder={field.placeholder} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isNumber}>
+            <lightning-input type="number" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} placeholder={field.placeholder} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isCurrency}>
+            <lightning-input type="number" formatter="currency" step="0.01" label={field.label} value={value}
+                required={isRequired} disabled={isReadOnly} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isDate}>
+            <lightning-input type="date" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} field-level-help={field.helpText} onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isDateTime}>
+            <lightning-input type="datetime" label={field.label} value={value} required={isRequired}
+                disabled={isReadOnly} field-level-help={field.helpText} onchange={handleSimpleChange}></lightning-input>
+        </template>
+
+        <template if:true={isCheckbox}>
+            <lightning-input type="checkbox" label={field.label} checked={value} disabled={isReadOnly}
+                field-level-help={field.helpText} onchange={handleCheckboxChange}></lightning-input>
+        </template>
+
+        <template if:true={isLongTextArea}>
+            <lightning-textarea label={field.label} value={value} required={isRequired} disabled={isReadOnly}
+                placeholder={field.placeholder} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-textarea>
+        </template>
+
+        <template if:true={isPicklist}>
+            <lightning-combobox label={field.label} value={value} options={comboboxOptions} required={isRequired}
+                disabled={isReadOnly} placeholder={field.placeholder} field-level-help={field.helpText}
+                onchange={handleSimpleChange}></lightning-combobox>
+        </template>
+
+        <template if:true={isMultiSelect}>
+            <lightning-dual-listbox label={field.label} source-label="Available" selected-label="Selected"
+                options={comboboxOptions} value={value} required={isRequired} disabled={isReadOnly}
+                field-level-help={field.helpText} onchange={handleMultiSelectChange}></lightning-dual-listbox>
+        </template>
+
+        <template if:true={isLookup}>
+            <lightning-record-picker label={field.label} object-api-name={field.lookupObjectApiName}
+                display-info={field.lookupDisplayField} value={value} required={isRequired} disabled={isReadOnly}
+                field-level-help={field.helpText} onchange={handleLookupChange}></lightning-record-picker>
+        </template>
+
+        <template if:true={isAddress}>
+            <fieldset class="slds-form-element">
+                <legend class="slds-form-element__legend slds-form-element__label">{field.label}</legend>
+                <div class="slds-form-element__control">
+                    <lightning-textarea label="Street" data-part="street" required={isRequired} disabled={isReadOnly}
+                        onchange={handleAddressPartChange}></lightning-textarea>
+                    <lightning-input label="City" data-part="city" required={isRequired} disabled={isReadOnly}
+                        onchange={handleAddressPartChange}></lightning-input>
+                    <lightning-input label="State/Province" data-part="state" disabled={isReadOnly}
+                        onchange={handleAddressPartChange}></lightning-input>
+                    <lightning-input label="Postal Code" data-part="postalCode" disabled={isReadOnly}
+                        onchange={handleAddressPartChange}></lightning-input>
+                    <lightning-input label="Country" data-part="country" required={isRequired} disabled={isReadOnly}
+                        onchange={handleAddressPartChange}></lightning-input>
+                </div>
+            </fieldset>
+        </template>
+
+    </div>
+</template>

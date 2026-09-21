@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_Description__c</fullName>
+    <description>Optional descriptive text shown under the section heading.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use to give end users context about what a section is asking for.</inlineHelpText>
+    <label>Section Description</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

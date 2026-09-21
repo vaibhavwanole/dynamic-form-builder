@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Layout__c</fullName>
+    <description>Column layout used for this field&apos;s section.</description>
+    <inlineHelpText>All fields in the same section should use the same layout value; the first field configuration read for a section determines it.</inlineHelpText>
+    <label>Display Layout</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-Column</fullName>
+                <default>false</default>
+                <label>1-Column</label>
+            </value>
+            <value>
+                <fullName>2-Column</fullName>
+                <default>false</default>
+                <label>2-Column</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available_For_Guest_Users__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Allows this form&apos;s configuration (structure only, not target-object data) to be read by unauthenticated Experience Cloud guest users.</description>
+    <inlineHelpText>When checked, config fetch runs in system mode so guest users without direct object access can still load the form&apos;s structure. Submission DML still enforces the running user&apos;s actual access.</inlineHelpText>
+    <label>Available For Guest Users</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

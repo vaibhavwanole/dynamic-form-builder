@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Composite__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marks this configuration as the master record of a multi-step composite form (a guided flow spanning multiple objects).</description>
+    <inlineHelpText>Set only on the master config. Individual steps are separate Form_Configuration__c records linked via Parent Form Configuration.</inlineHelpText>
+    <label>Is Composite</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Renders the field as visible but non-editable.</description>
+    <inlineHelpText>Useful for showing context (e.g. a related record&apos;s status) without allowing edits, independent of the user&apos;s actual FLS edit access.</inlineHelpText>
+    <label>Read Only</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

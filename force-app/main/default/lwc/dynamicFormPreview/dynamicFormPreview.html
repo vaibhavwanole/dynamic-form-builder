@@ -1,0 +1,77 @@
+<template>
+    <lightning-card icon-name="utility:preview">
+        <div slot="title">Form Preview</div>
+        <lightning-button-icon
+            slot="actions"
+            icon-name="utility:refresh"
+            alternative-text="Refresh"
+            title="Refresh"
+            onclick={handleRefresh}>
+        </lightning-button-icon>
+
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+                    {errorMessage}
+                </div>
+            </template>
+
+            <template if:true={successMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_success slds-m-bottom_small" role="alert">
+                    {successMessage}
+                </div>
+            </template>
+
+            <template if:true={schema}>
+                <lightning-input
+                    label="Preview against a sample record Id (optional)"
+                    value={sampleRecordId}
+                    placeholder="e.g. 001XXXXXXXXXXXXXXX"
+                    field-level-help="Enter a real record Id of the target object to test Update-mode prefill. Submitting will genuinely update that record."
+                    onchange={handleSampleRecordIdChange}>
+                </lightning-input>
+
+                <p class="slds-text-body_small slds-text-color_weak slds-m-vertical_small slds-text-align_center">
+                    Mode: {modeLabel}. This is a live form - submitting will actually create or update a record.
+                </p>
+
+                <div class="slds-box slds-box_x-small slds-p-around_medium dfb-preview-outline">
+                    <h2 class="slds-text-heading_medium slds-text-align_center slds-m-bottom_medium">
+                        {formTitle}
+                    </h2>
+
+                    <template if:true={hasValidationErrors}>
+                        <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="alert">
+                            <ul>
+                                <template for:each={validationErrors} for:item="err">
+                                    <li key={err}>{err}</li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+
+                    <template for:each={sections} for:item="section">
+                        <c-dynamic-form-section
+                            key={section.sectionName}
+                            section={section}
+                            field-values={fieldValues}
+                            hidden-field-api-names={hiddenFieldApiNames}
+                            required-overrides={requiredOverrides}
+                            onfieldchange={handleFieldChange}>
+                        </c-dynamic-form-section>
+                    </template>
+
+                    <div class="slds-align_absolute-center slds-m-top_medium">
+                        <lightning-button
+                            variant="brand"
+                            label={submitButtonLabel}
+                            onclick={handleSubmit}
+                            disabled={isSubmitting}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
