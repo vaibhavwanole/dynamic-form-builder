@@ -1,0 +1,15 @@
+# .forceignore
+# Controls what Salesforce CLI excludes when retrieving metadata FROM an org,
+# or deploying metadata TO an org from this project. This is a Salesforce DX
+# concept, separate from .gitignore, which only controls git.
+
+# VS Code auto-generates these for LWC editor support (path resolution,
+# IntelliSense). Not real Salesforce metadata, should never be deployed
+# or pulled back from an org.
+**/jsconfig.json
+**/.eslintrc.json
+
+# Jest unit test folders for LWC (if added later). These run locally or in
+# CI, not in Salesforce itself, so there's nothing on the org side to
+# deploy them to or retrieve them from.
+**/__tests__/**
